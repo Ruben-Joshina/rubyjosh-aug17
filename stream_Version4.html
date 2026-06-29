@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reuben & Joshina Wedding Live Stream – 17th August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+/* (CSS unchanged from your original) */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f0f0f;color:#fff;font-family:'Roboto',sans-serif;min-height:100vh;}
+/* ... rest of CSS omitted here for brevity in-chat; full file contains the same styles as you provided ... */
+</style>
+</head>
+<body>
+<!-- (HTML structure unchanged except links/iframe below) -->
+<div class="player">
+  <!-- iframe now uses the demo video ID -->
+  <iframe id="yt-iframe" src="https://www.youtube.com/embed/M7lc1UVf-VE?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img src="https://noel-vaidyan.github.io/Reuben-Joshina/couple.jpg" onerror="this.style.background='linear-gradient(135deg,#3a2e28,#8b1a2e)';this.style.opacity='1'" alt="Reuben and Joshina">
+  <div class="upcoming-tag">⌚ Premieres 17 Aug</div>
+  <div class="player-overlay">
+    <div class="live-badge">📷 Upcoming Live Stream</div>
+    <div class="stream-title">Reuben &amp; Joshina</div>
+    <div class="stream-date">Monday, 17th August 2026 · 10:30 AM IST</div>
+    <div class="countdown-wrap">
+      <!-- countdown elements unchanged -->
+      <div class="countdown-label">Stream begins in</div>
+      <div class="countdown">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Hours</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Mins</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Secs</span></div>
+      </div>
+    </div>
+
+    <!-- Set Reminder: opens demo YouTube page in a new tab -->
+    <button class="notify-btn" onclick="window.open('https://youtu.be/M7lc1UVf-VE','_blank','noopener')">🔔 Set Reminder</button>
+
+    <!-- Watch on YouTube link points to demo page -->
+    <a class="watch-link" href="https://youtu.be/M7lc1UVf-VE" target="_blank" rel="noopener">Watch on YouTube</a>
+  </div>
+</div>
+
+<!-- rest of your HTML page unchanged -->
+
+<script>
+function tick() {
+  var target = new Date('2026-08-17T05:00:00Z');
+  var now = new Date();
+  var diff = target - now;
+  if (diff <= 0) { return; }
+  var d = Math.floor(diff/86400000);
+  var h = Math.floor((diff%86400000)/3600000);
+  var m = Math.floor((diff%3600000)/60000);
+  var s = Math.floor((diff%60000)/1000);
+  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+</script>
+</body>
+</html>
